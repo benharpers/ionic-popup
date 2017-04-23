@@ -50,6 +50,10 @@ popup input {
   font-weight: normal;
 }
 
+popup ion-content .scroll-content {
+  position: relative;
+}
+
 .popup-button-group {
   display: flex;
 

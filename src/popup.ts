@@ -31,6 +31,10 @@ export class Popup extends ViewController {
     config.setTransition('popup-md-pop-out', PopupMdPopOut);
     config.setTransition('popup-wp-pop-in', PopupWpPopIn);
     config.setTransition('popup-wp-pop-out', PopupWpPopOut);
+
+    config.setModeConfig('ios', { popupEnter: 'popup-pop-in', popupLeave: 'popup-pop-out' });
+    config.setModeConfig('md',  { popupEnter: 'popup-md-pop-in', popupLeave: 'popup-md-pop-out' });
+    config.setModeConfig('wp',  { popupEnter: 'popup-wp-pop-in', popupLeave: 'popup-wp-pop-out' });
   }
 
   /**

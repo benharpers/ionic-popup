@@ -65,6 +65,14 @@ export class PopupCmp {
     // gesture blocker is used to disable gestures dynamically
     this.gestureBlocker = gestureCtrl.createBlocker(BLOCK_ALL);
     this.d = params.data;
+
+    this.d.buttons = this.d.buttons.map(button => {
+      if (typeof button === 'string') {
+        return { text: button };
+      }
+      return button;
+    });
+
     this.mode = this.d.mode || config.get('mode');
     renderer.setElementClass(elementRef.nativeElement, `popup-${this.mode}`, true);
 
@@ -139,18 +147,6 @@ export class PopupCmp {
         this.dismiss('backdrop');
       }
     }
-  }
-
-  ionViewDidLoad() {
-    // normalize the data
-    const data = this.d;
-
-    data.buttons = data.buttons.map(button => {
-      if (typeof button === 'string') {
-        return { text: button };
-      }
-      return button;
-    });
   }
 
   dismiss(role: any): Promise<any> {

@@ -12,7 +12,7 @@ export class PopupPopIn extends Transition {
 
     wrapper.fromTo('opacity', 0.01, 1).fromTo('scale', 1.1, 1);
     backdrop.fromTo('opacity', 0.01, 0.3);
-alert('test');
+
     this
       .easing('ease-in-out')
       .duration(200)
