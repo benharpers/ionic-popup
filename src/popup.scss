@@ -1,0 +1,87 @@
+popup {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: $z-index-overlay;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  contain: strict;
+}
+
+popup.popup-top {
+  align-items: flex-start;
+
+  padding-top: 50px;
+}
+
+popup input {
+  width: 100%;
+}
+
+.popup-wrapper {
+  z-index: $z-index-overlay-wrapper;
+  display: flex;
+
+  flex-direction: column;
+
+  min-width: $alert-min-width;
+  max-height: $alert-max-height;
+
+  opacity: 0;
+
+  contain: content;
+}
+
+.popup-title {
+  margin: 0;
+  padding: 0;
+}
+
+.popup-sub-title {
+  margin: 5px 0 0;
+  padding: 0;
+
+  font-weight: normal;
+}
+
+.popup-button-group {
+  display: flex;
+
+  flex-direction: row;
+}
+
+.popup-button-group-vertical {
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.popup-button {
+  z-index: 0;
+  display: block;
+
+  margin: 0;
+
+  font-size: $alert-button-font-size;
+  line-height: $alert-button-line-height;
+}
+
+.popup-tappable {
+  @include appearance(none);
+
+  margin: 0;
+  padding: 0;
+
+  width: 100%;
+
+  font-size: inherit;
+  line-height: initial;
+  text-align: left;
+  text-align: start;
+  background: transparent;
+}

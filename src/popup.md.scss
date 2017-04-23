@@ -1,0 +1,60 @@
+.popup-md .popup-wrapper {
+  max-width: $alert-md-max-width;
+
+  border-radius: $alert-md-border-radius;
+  background-color: $alert-md-background-color;
+
+  box-shadow: $alert-md-box-shadow;
+}
+
+// Material Design Alert Header
+// --------------------------------------------------
+
+.popup-md .popup-head {
+  padding: $alert-md-head-padding;
+
+  text-align: $alert-md-head-text-align;
+}
+
+.popup-md .popup-title {
+  font-size: $alert-md-title-font-size;
+}
+
+.popup-md .popup-sub-title {
+  font-size: $alert-md-sub-title-font-size;
+}
+
+
+// Material Design Alert Button
+// --------------------------------------------------
+
+.popup-md .popup-button-group {
+  flex-wrap: $alert-md-button-group-flex-wrap;
+  justify-content: $alert-md-button-group-justify-content;
+
+  padding: $alert-md-button-group-padding;
+}
+
+.popup-md .popup-button {
+  // necessary for ripple to work properly
+  position: relative;
+  overflow: hidden;
+
+  margin: $alert-md-button-margin;
+  padding: $alert-md-button-padding;
+
+  border-radius: $alert-md-button-border-radius;
+  font-weight: $alert-md-button-font-weight;
+  text-align: $alert-md-button-text-align;
+  text-transform: $alert-md-button-text-transform;
+  color: $alert-md-button-text-color;
+  background-color: $alert-md-button-background-color;
+}
+
+.popup-md .popup-button.activated {
+  background-color: $alert-md-button-background-color-activated;
+}
+
+.popup-md .popup-button .button-inner {
+  justify-content: $alert-md-button-group-justify-content;
+}

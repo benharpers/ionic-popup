@@ -1,0 +1,71 @@
+.popup-wp ion-backdrop {
+  background: $alert-wp-backdrop-background;
+}
+
+.popup-wp .popup-wrapper {
+  width: $alert-wp-width;
+  max-width: $alert-wp-max-width;
+
+  border: $alert-wp-border-width $alert-wp-border-style $alert-wp-border-color;
+  border-radius: $alert-wp-border-radius;
+  background: $alert-wp-background;
+}
+
+// Windows Alert Header
+// --------------------------------------------------
+
+.popup-wp .popup-head {
+  padding: $alert-wp-head-padding;
+
+  text-align: $alert-wp-head-text-align;
+}
+
+.popup-wp .popup-title {
+  font-size: $alert-wp-title-font-size;
+  font-weight: $alert-wp-title-font-weight;
+}
+
+.popup-wp .popup-sub-title {
+  font-size: $alert-wp-sub-title-font-size;
+}
+
+
+// Windows Alert Button
+// --------------------------------------------------
+
+.popup-wp .popup-button-group {
+  flex-wrap: $alert-wp-button-group-flex-wrap;
+  justify-content: $alert-wp-button-group-justify-content;
+
+  padding: $alert-wp-button-group-padding;
+}
+
+.popup-wp .popup-button-group-vertical .popup-button {
+  margin-top: $alert-wp-button-group-vertical-margin-top;
+
+  width: $alert-wp-button-group-vertical-width;
+}
+
+.popup-wp .popup-button-group-vertical .popup-button:first-child:not(:only-child) {
+  margin-top: 0;
+  margin-right: 0;
+}
+
+.popup-wp .popup-button {
+  padding: $alert-wp-button-padding;
+
+  width: $alert-wp-button-width;
+
+  border-radius: $alert-wp-button-border-radius;
+  font-weight: $alert-wp-button-font-weight;
+  color: $alert-wp-button-text-color;
+  background: $alert-wp-button-background;
+}
+
+.popup-wp .popup-button:first-child:not(:only-child) {
+  margin-right: $alert-wp-button-margin-right;
+}
+
+.popup-wp .popup-button.activated {
+  background: $alert-wp-button-background-activated;
+}

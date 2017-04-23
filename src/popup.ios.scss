@@ -1,0 +1,69 @@
+.popup-ios .popup-wrapper {
+  overflow: hidden;
+
+  max-width: $alert-ios-max-width;
+
+  border-radius: $alert-ios-border-radius;
+  background-color: $alert-ios-background;
+
+  box-shadow: $alert-ios-box-shadow;
+}
+
+
+// iOS Alert Header
+// --------------------------------------------------
+
+.popup-ios .popup-head {
+  padding: $alert-ios-head-padding;
+
+  text-align: $alert-ios-head-text-align;
+}
+
+.popup-ios .popup-title {
+  margin-top: $alert-ios-title-margin-top;
+
+  font-size: $alert-ios-title-font-size;
+  font-weight: $alert-ios-title-font-weight;
+}
+
+.popup-ios .popup-sub-title {
+  font-size: $alert-ios-sub-title-font-size;
+  color: $alert-ios-sub-title-text-color;
+}
+
+
+// iOS Alert Button
+// --------------------------------------------------
+
+.popup-ios .popup-button-group {
+  flex-wrap: $alert-ios-button-group-flex-wrap;
+
+  margin-right: -$alert-ios-button-border-width;
+}
+
+.popup-ios .popup-button {
+  overflow: hidden;
+
+  flex: $alert-ios-button-flex;
+
+  margin: $alert-ios-button-margin;
+
+  min-width: $alert-ios-button-min-width;
+  height: $alert-ios-button-min-height;
+
+  border-top: $alert-ios-button-border-width $alert-ios-button-border-style $alert-ios-button-border-color;
+  border-right: $alert-ios-button-border-width $alert-ios-button-border-style $alert-ios-button-border-color;
+  border-radius: $alert-ios-button-border-radius;
+  font-size: $alert-ios-button-font-size;
+  color: $alert-ios-button-text-color;
+  background-color: $alert-ios-button-background-color;
+}
+
+.popup-ios .popup-button:last-child {
+  border-right: 0;
+  font-weight: $alert-ios-button-main-font-weight;
+}
+
+.popup-ios .popup-button.activated {
+  background-color: $alert-ios-button-background-color-activated;
+}
