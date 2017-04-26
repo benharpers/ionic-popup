@@ -14,8 +14,8 @@ export class PopupController {
    * Display a popup with a title, component page, and buttons
    * @param {AlertOptions} opts Alert. See the table below
    */
-  create(controller: any, opts: PopupOptions = {}): Popup {
-    return new Popup(this._app, controller, opts, this.config);
+  create(controller: any, data: any = {}, opts: PopupOptions = {}): Popup {
+    return new Popup(this._app, controller, data, opts, this.config);
   }
 
 }

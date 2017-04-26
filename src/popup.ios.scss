@@ -1,6 +1,7 @@
 .popup-ios .popup-wrapper {
   overflow: hidden;
 
+  min-width: $alert-ios-min-width;
   max-width: $alert-ios-max-width;
 
   border-radius: $alert-ios-border-radius;

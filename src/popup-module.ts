@@ -1,7 +1,6 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { IonicModule } from 'ionic-angular';
 
-import { Popup } from './popup';
 import { PopupController } from './popup-controller';
 import { PopupCmp } from './popup-component';
 
@@ -11,9 +10,6 @@ import { PopupCmp } from './popup-component';
   ],
   imports: [
     IonicModule
-  ],
-  exports: [
-    PopupCmp
   ],
   entryComponents: [
     PopupCmp

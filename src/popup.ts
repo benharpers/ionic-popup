@@ -16,8 +16,9 @@ import { PopupCmp } from './popup-component';
 export class Popup extends ViewController {
   private _app: App;
 
-  constructor(app: App, component: any, opts: PopupOptions = {}, config: Config) {
+  constructor(app: App, component: any, data: any = {}, opts: PopupOptions = {}, config: Config) {
     opts.component = component;
+    opts.data = data;
     opts.buttons = opts.buttons || [];
     opts.enableBackdropDismiss = isPresent(opts.enableBackdropDismiss) ? !!opts.enableBackdropDismiss : true;
 

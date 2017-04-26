@@ -75,6 +75,17 @@ popup ion-content .scroll-content {
   line-height: $alert-button-line-height;
 }
 
+@each $name, $hex in $colors {
+  .popup-button[ng-reflect-color=#{$name}] {
+
+    background-color: $hex ! important;
+
+    .button-inner {
+      color: #fff;
+    }
+  }
+}
+
 .popup-tappable {
   @include appearance(none);
 

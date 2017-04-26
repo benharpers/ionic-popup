@@ -19,13 +19,13 @@ import { PopupOptions, PopupButton } from './popup-options';
   template:
     '<ion-backdrop (click)="bdClick()" [class.backdrop-no-tappable]="!d.enableBackdropDismiss"></ion-backdrop>' +
     '<div class="popup-wrapper">' +
-      '<div class="popup-head">' +
+      '<div class="popup-head" *ngIf="d.title || d.subTitle">' +
         '<h2 id="{{hdrId}}" class="popup-title" *ngIf="d.title" [innerHTML]="d.title"></h2>' +
         '<h3 id="{{subHdrId}}" class="popup-sub-title" *ngIf="d.subTitle" [innerHTML]="d.subTitle"></h3>' +
       '</div>' +
       '<div #viewport nav-viewport></div>' +
       '<div class="popup-button-group" [ngClass]="{\'popup-button-group-vertical\':d.buttons.length>2}">' +
-        '<button ion-button="popup-button" *ngFor="let b of d.buttons" (click)="btnClick(b)" [ngClass]="b.cssClass">' +
+        '<button ion-button="popup-button" *ngFor="let b of d.buttons" (click)="btnClick(b)" [ngClass]="b.cssClass" [color]="b.color" [solid]="b.solid">' +
           '{{b.text}}' +
         '</button>' +
       '</div>' +
@@ -83,11 +83,18 @@ export class PopupCmp {
       });
     }
 
+    if (this.d.hasInputs && this.plt.is('mobile')) {
+      // this alert has a text input and it's on a mobile device so we should align
+      // the alert up high because we need to leave space for the virtual keboard
+      // this also helps prevent the layout getting all messed up from
+      // the browser trying to scroll the input into a safe area
+      renderer.setElementClass(elementRef.nativeElement, 'popup-top', true);
+    }
+
     this.id = (++popupIds);
     this.hdrId = 'popup-hdr-' + this.id;
     this.subHdrId = 'popup-subhdr-' + this.id;
     this.activeId = '';
-
   }
 
   ionViewPreLoad() {
