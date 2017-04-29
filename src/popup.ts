@@ -5,6 +5,8 @@ import { App,
 
 import { PopupPopIn, PopupPopOut, PopupMdPopIn, PopupMdPopOut, PopupWpPopIn, PopupWpPopOut } from './popup-transitions';
 
+import { MODE_IOS, MODE_MD, MODE_WP } from 'ionic-angular/config/mode-registry.js';
+
 import { isPresent } from 'ionic-angular/util/util';
 
 import { PopupOptions, PopupButton } from './popup-options';
@@ -33,9 +35,12 @@ export class Popup extends ViewController {
     config.setTransition('popup-wp-pop-in', PopupWpPopIn);
     config.setTransition('popup-wp-pop-out', PopupWpPopOut);
 
-    config.setModeConfig('ios', { popupEnter: 'popup-pop-in', popupLeave: 'popup-pop-out' });
-    config.setModeConfig('md',  { popupEnter: 'popup-md-pop-in', popupLeave: 'popup-md-pop-out' });
-    config.setModeConfig('wp',  { popupEnter: 'popup-wp-pop-in', popupLeave: 'popup-wp-pop-out' });
+    // iOS Mode Settings
+    config.setModeConfig('ios', Object.assign(MODE_IOS,{ popupEnter: 'popup-pop-in', popupLeave: 'popup-pop-out' }));
+    // Material Design Mode Settings
+    config.setModeConfig('md', Object.assign(MODE_MD,{ popupEnter: 'popup-md-pop-in', popupLeave: 'popup-md-pop-out' }));
+    // Windows Mode Settings
+    config.setModeConfig('wp', Object.assign(MODE_WP,{ popupEnter: 'popup-wp-pop-in', popupLeave: 'popup-wp-pop-out' }));
   }
 
   /**
